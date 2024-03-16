@@ -438,7 +438,7 @@ Set<Set<int>> MakeAltEta(const Set<Set<int>>& H, const Set<Set<int>>& V) {
 int main(void) {
 	Set<Set<int>> FamilyBase = MakeRandomIndependentFamilyBase(8, 1, 3);
 	std::cout << "Family Base " << FamilyBase << std::endl;
-	Set<Set<int>> Family = MakeFamilyFromBase(FamilyBase, 0.0);
+	Set<Set<int>> Family = MakeFamilyFromBase(FamilyBase, 0.25);
 	/** Too verbose... here for debug purposes! */
 	// std::cout << "Family " << Family << std::endl;
 	Set<Set<int>> SF = Sigma(Family);
