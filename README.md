@@ -28,6 +28,19 @@ mkdir build & cd build
 cmake ..
 ```
 
+# Example
+
+The program generate a random family base that it will then use to create the full family using Union operations.
+
+Sample Base
+`{{1}, {2}, {3, 4, 5}, {5}, {6, 7, 8}, {9}, {10, 11}, {11}}`
+
+The Family that will be produced will have a cardinality of `2^n` but with the following function you can edit the percentage of elements you want to leave outside the generated family that way the algorithm becomes more "interesting" in a way.
+(The recommended setting for that value is `0.25` which would leave 1/4 of the elements out of the final Family)
+```cpp
+Set<Set<int>> Family = MakeFamilyFromBase(FamilyBase, 0.0);
+```
+
 # Conclusion
 
 Enjoy.
